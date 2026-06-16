@@ -1,6 +1,5 @@
 .brand-carousel {
   background: var(--bg-page);
-  border-bottom: 1px solid var(--border-color);
 }
 
 .brand-carousel__inner {
