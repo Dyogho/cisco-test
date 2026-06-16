@@ -1,7 +1,15 @@
 .product-nav {
+  position: sticky;
+  top: var(--site-header-height, 0);
+  z-index: 29;
   display: none;
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
+  transition: box-shadow 180ms ease;
+}
+
+body.is-scrolled .product-nav {
+  box-shadow: 0 10px 24px rgb(15 23 42 / 0.06);
 }
 
 .product-nav__list {
