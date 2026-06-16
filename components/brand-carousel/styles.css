@@ -88,11 +88,11 @@
 }
 
 .brand-carousel__side-button--prev {
-  left: -2.5rem;
+  left: -1.75rem;
 }
 
 .brand-carousel__side-button--next {
-  right: -2.5rem;
+  right: -1.75rem;
 }
 
 @media (min-width: 768px) {
@@ -104,8 +104,30 @@
     display: inline-flex;
   }
 
+  .brand-carousel__side-button--prev {
+    left: -1.75rem;
+  }
+
+  .brand-carousel__side-button--next {
+    right: -1.75rem;
+  }
+
+  .brand-carousel__viewport {
+    padding-inline: 2.25rem;
+  }
+
   .brand-carousel__track {
     grid-auto-columns: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .brand-carousel__side-button--prev {
+    left: -2.5rem;
+  }
+
+  .brand-carousel__side-button--next {
+    right: -2.5rem;
   }
 }
 

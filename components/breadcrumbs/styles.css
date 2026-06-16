@@ -7,9 +7,11 @@
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
+  justify-content: flex-start;
   gap: 0.25rem;
   overflow-x: auto;
   padding-block: 0.5rem;
+  padding-inline-start: 0;
   color: var(--text-muted);
   font-size: 0.75rem;
   list-style: none;
