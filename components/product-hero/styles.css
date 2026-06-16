@@ -382,3 +382,59 @@
     display: block;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .product-hero__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .product-hero__gallery {
+    display: contents;
+  }
+
+  .product-hero__media-row {
+    grid-column: 1;
+  }
+
+  .product-hero__gallery,
+  .product-hero__summary {
+    width: 100%;
+  }
+
+  .product-hero__summary {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .product-hero__info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-hero__docs--media {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 0;
+    min-width: 0;
+  }
+
+  .product-hero__docs--media .product-hero__docs-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .product-hero__docs--media .product-hero__docs-list a {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-hero__content {
+    display: flex;
+  }
+
+  .product-hero__gallery {
+    display: grid;
+  }
+}
