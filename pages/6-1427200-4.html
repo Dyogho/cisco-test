@@ -16,8 +16,11 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- css  -->
   <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../components/header/styles.css" />
+  <link rel="stylesheet" href="../components/navbar/styles.css" />
   <link rel="stylesheet" href="../components/footer/styles.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../components/header/script.js" defer></script>
   <!-- carga del navbar -->
   <script src="./js/nav.js"></script>
 
@@ -29,91 +32,133 @@
 </head>
 
 <body>
-  <!-- SUBMENU DE MARCA DEPENDIENDO DEL PRODUCTO -->
-  <nav class="bg-white border-b border-gray-200 shadow-sm">
-    <div class="relative">
-      <!-- Contenedor con scroll horizontal -->
-      <div class="nav-container flex justify-evenly overflow-x-auto md:py-2 px-4 space-x-2 scrollbar-hide">
-        <!-- Item 1 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/catalys_9200l.html"
-          class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/Switch Catalyst.ico" class="nav-icon max-h-full max-w-full" alt="Switch Catalyst" />
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Switch Catalyst</span>
-        </a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-shell site-header__grid">
+      <a class="site-header__logo" href="https://www.ds3comunicaciones.com/" aria-label="DS3 Comunicaciones">
+        <img src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" width="182"
+          height="56" />
+      </a>
 
-        <!-- Item 2 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/bussines_sg350.html"
-          class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/Cisco Business.ico" class="nav-icon max-h-full max-w-full" alt="Cisco Business" />
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Cisco Business</span>
-        </a>
-
-        <!-- Item 3 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html"
-          class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/Switch Industrial.ico" class="nav-icon max-h-full max-w-full" alt="Switch Industrial" />
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Switch Industrial</span>
-        </a>
-
-        <!-- Item 4 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html"
-          class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M21 42C32.598 42 42 32.598 42 21C42 9.40202 32.598 0 21 0C9.40202 0 0 9.40202 0 21C0 32.598 9.40202 42 21 42Z"
-                fill="white" stroke="black" stroke-width="2" />
-
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M27 21C27 24.3137 24.3137 27 21 27C17.6863 27 15 24.3137 15 21C15 17.6863 17.6863 15 21 15C24.3137 15 27 17.6863 27 21Z"
-                fill="black" />
-
-              <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M29 21C29 25.4183 25.4183 29 21 29C16.5817 29 13 25.4183 13 21C13 16.5817 16.5817 13 21 13C25.4183 13 29 16.5817 29 21Z"
-                fill="white" stroke="black" stroke-width="2" />
-            </svg>
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Aironet</span>
-        </a>
-
-        <!-- Item 5 -->
-        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html"
-          class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/Télefono.ico" class="nav-icon max-h-full max-w-full" alt="Teléfono" />
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Teléfono</span>
-        </a>
-
-        <!-- Item 6 -->
-        <a href="https://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html"
-          class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/mariakii.ico" class="nav-icon max-h-full max-w-full" alt="Meraki" />
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Meraki</span>
-        </a>
-
-        <!-- Item 7 -->
-        <a href="#" class="nav-item flex items-center p-1.5 rounded-lg min-w-fit flex-shrink-0 space-x-1.5">
-          <div class="icon-container h-6 w-6 flex items-center justify-center">
-            <img src="./icons/Transceiver.ico" class="nav-icon max-h-full max-w-full" alt="Transceiver" />
-          </div>
-          <span class="text-xs font-medium text-gray-600 whitespace-nowrap">Transceiver</span>
-        </a>
+      <div class="site-header__search" role="search">
+        <form class="site-header__search-form" action="https://www.ds3comunicaciones.com/find.html" method="get">
+          <input type="hidden" name="cx" value="partner-pub-9265252540298851:f2549i3fi60" />
+          <input type="hidden" name="cof" value="FORID:10" />
+          <input type="hidden" name="ie" value="ISO-8859-1" />
+          <label class="sr-only" for="site-search">Buscar producto</label>
+          <span class="site-header__search-icon" aria-hidden="true">
+            <i class="fas fa-search"></i>
+          </span>
+          <input id="site-search" name="q" type="search" placeholder="¿Qué estás buscando?" />
+        </form>
       </div>
+
+      <div class="site-header__actions" aria-label="Cisco">
+        <img src="https://www.ds3comunicaciones.com/cisco/images/cisco-gif.gif" alt="cisco" />
+      </div>
+
+      <button class="site-header__menu-button" type="button" aria-label="Abrir menú" aria-controls="mobile-product-menu"
+        aria-expanded="false" data-menu-open>
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="site-header__overlay" data-menu-overlay hidden></div>
+
+    <aside class="mobile-product-menu" id="mobile-product-menu" aria-label="Menú de categorías" hidden>
+      <div class="mobile-product-menu__header">
+        <span>Menú</span>
+        <button type="button" aria-label="Cerrar menú" data-menu-close>
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <nav class="mobile-product-menu__nav" aria-label="Categorías Cisco">
+        <a href="https://www.ds3comunicaciones.com/cisco/catalys_9200l.html">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img
+              src="https://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif" alt="" /></span>
+          <span>Switch Catalyst</span>
+        </a>
+        <a href="https://www.ds3comunicaciones.com/cisco/bussines_sg350.html">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img src="../icons/Cisco Business.ico"
+              alt="" /></span>
+          <span>Cisco Business</span>
+        </a>
+        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img src="../icons/Switch Industrial.ico"
+              alt="" /></span>
+          <span>Switch Industrial</span>
+        </a>
+        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img src="../icons/Aironet.ico" alt="" /></span>
+          <span>Aironet</span>
+        </a>
+        <a href="https://www.ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img src="../icons/Télefono.ico" alt="" /></span>
+          <span>Teléfono</span>
+        </a>
+        <a href="https://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img src="../icons/mariakii.ico" alt="" /></span>
+          <span>Meraki</span>
+        </a>
+        <a href="#">
+          <span class="mobile-product-menu__icon" aria-hidden="true"><img src="../icons/Transceiver.ico"
+              alt="" /></span>
+          <span>Transceiver</span>
+        </a>
+      </nav>
+    </aside>
+  </header>
+
+  <nav class="product-nav" aria-label="Categorías Cisco">
+    <div class="header-shell product-nav__list">
+      <a class="product-nav__item" href="https://www.ds3comunicaciones.com/cisco/catalys_9200l.html">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="https://www.ds3comunicaciones.com/cisco/images/logo-cisco.gif" alt="" />
+        </span>
+        <span>Switch Catalyst</span>
+      </a>
+      <a class="product-nav__item" href="https://www.ds3comunicaciones.com/cisco/bussines_sg350.html">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="../icons/Cisco Business.ico" alt="" />
+        </span>
+        <span>Cisco Business</span>
+      </a>
+      <a class="product-nav__item"
+        href="https://www.ds3comunicaciones.com/cisco/precios_cisco_switch_industrial_b.html">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="../icons/Switch Industrial.ico" alt="" />
+        </span>
+        <span>Switch Industrial</span>
+      </a>
+      <a class="product-nav__item" href="https://www.ds3comunicaciones.com/cisco/precios_cisco_access_point_b.html">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="../icons/Aironet.ico" alt="" />
+        </span>
+        <span>Aironet</span>
+      </a>
+      <a class="product-nav__item" href="https://www.ds3comunicaciones.com/cisco/precios_cisco_telefonos_b.html">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="../icons/Télefono.ico" alt="" />
+        </span>
+        <span>Teléfono</span>
+      </a>
+      <a class="product-nav__item" href="https://ds3comunicaciones.com/cisco/precios_cisco_meraki_b.html">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="../icons/mariakii.ico" alt="" />
+        </span>
+        <span>Meraki</span>
+      </a>
+      <a class="product-nav__item" href="#">
+        <span class="product-nav__icon" aria-hidden="true">
+          <img src="../icons/Transceiver.ico" alt="" />
+        </span>
+        <span>Transceiver</span>
+      </a>
     </div>
   </nav>
 
-  <!-- CONTENIDO DEL PRODUCTO -->
   <main class="">
-    <!-- CASCADA DE NAVEGACIÓN RESPONSIVE "MARCA | PRODUCTO | NOMBRE" -->
     <div
       class="border px-3 py-2 text-xs md:text-sm text-slate-600 flex flex-nowrap items-center gap-1 overflow-x-auto scrollbar-hide whitespace-nowrap">
       <a href="https://www.ds3comunicaciones.com/index.html" class="flex-shrink-0 hover:text-blue-600">
@@ -1025,29 +1070,33 @@
     <div class="page-shell site-footer__columns">
       <section class="site-footer__column site-footer__brand-column" aria-labelledby="footer-company">
         <h2 id="footer-company" class="sr-only">DS3 Comunicaciones</h2>
-        <img class="site-footer__logo" src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg" alt="DS3 Comunicaciones" width="160" height="49" />
-  
+        <img class="site-footer__logo" src="https://www.ds3comunicaciones.com/mikrotik/images/Logo1.jpg"
+          alt="DS3 Comunicaciones" width="160" height="49" />
+
         <ul class="site-footer__contact-list" aria-label="Canales de contacto">
           <li>
             <span class="site-footer__icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
-            <a href="https://wa.me/51996533223?text=Hola necesito ayuda" target="_blank" rel="noopener noreferrer">996 533 223</a>
+            <a href="https://wa.me/51996533223?text=Hola necesito ayuda" target="_blank" rel="noopener noreferrer">996
+              533 223</a>
           </li>
           <li>
             <span class="site-footer__icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></span>
-            <a href="https://wa.me/51994428965?text=Hola necesito ayuda" target="_blank" rel="noopener noreferrer">994 428 965</a>
+            <a href="https://wa.me/51994428965?text=Hola necesito ayuda" target="_blank" rel="noopener noreferrer">994
+              428 965</a>
           </li>
           <li>
             <span class="site-footer__icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
             <a href="mailto:netperu100@hotmail.com">netperu100@hotmail.com</a>
           </li>
         </ul>
-  
+
         <div class="site-footer__social" aria-label="Redes sociales">
           <a href="#" aria-label="Facebook DS3 Comunicaciones"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-          <a href="https://wa.me/51994428965?text=Hola necesito ayuda" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp DS3 Comunicaciones"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://wa.me/51994428965?text=Hola necesito ayuda" target="_blank" rel="noopener noreferrer"
+            aria-label="WhatsApp DS3 Comunicaciones"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
         </div>
       </section>
-  
+
       <section class="site-footer__column" aria-labelledby="footer-solutions">
         <h2 id="footer-solutions">Soluciones</h2>
         <ul>
@@ -1059,23 +1108,23 @@
           <li><a href="https://www.ds3comunicaciones.com/trendnet/MediaConvert.html">Media Converter</a></li>
         </ul>
       </section>
-  
+
       <section class="site-footer__column" aria-labelledby="footer-support">
         <h2 id="footer-support">Soporte</h2>
         <ul>
           <li><a href="https://www.ds3comunicaciones.com/soporte.html">Soporte Técnico</a></li>
           <li><a href="https://ds3comunicaciones.com/us.html">Acerca de Nosotros</a></li>
-  
+
         </ul>
       </section>
-  
+
       <section class="site-footer__column" aria-labelledby="footer-hours">
         <h2 id="footer-hours">Horario de Atención</h2>
         <p>Lunes a Viernes: 9:00 - 18:00</p>
         <p>Sábados: 9:00 - 13:00</p>
       </section>
     </div>
-  
+
     <div class="page-shell site-footer__copyright">
       © 2026 DS3 Comunicaciones. Todos los derechos reservados.
     </div>
