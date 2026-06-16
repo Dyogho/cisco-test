@@ -2,7 +2,8 @@
   order: 1;
   width: 100%;
   background: #eeeeee;
-  padding-block: var(--grid-gutter);
+  padding-top: 1rem;
+  padding-bottom: var(--grid-gutter);
   font-family: Inter, Roboto, "Segoe UI", system-ui, sans-serif;
 }
 
