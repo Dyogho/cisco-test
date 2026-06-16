@@ -1,0 +1,108 @@
+.related-products {
+  background: var(--bg-bone);
+  padding-block: var(--grid-gutter);
+}
+
+.related-products__inner {
+  width: min(100% - (var(--grid-margin) * 2), var(--content-max-width));
+  margin-inline: auto;
+}
+
+.related-products__header {
+  margin-bottom: var(--grid-gutter);
+  text-align: center;
+}
+
+.related-products__title {
+  display: inline-block;
+  padding: 0.875rem 1.25rem;
+  color: var(--text-inverse);
+  background: var(--color-secondary);
+  border-radius: var(--radius-md);
+  font-size: clamp(1.25rem, 2.5vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.related-products__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.related-products__card {
+  display: flex;
+  min-width: 0;
+  height: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgb(15 23 42 / 0.08);
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.related-products__card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 28px rgb(15 23 42 / 0.12);
+}
+
+.related-products__media {
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.related-products__media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 180ms ease;
+}
+
+.related-products__card:hover .related-products__media img {
+  transform: scale(1.05);
+}
+
+.related-products__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.related-products__name {
+  color: var(--text-black);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.related-products__description {
+  color: var(--text-soft);
+  font-size: 0.875rem;
+}
+
+.related-products__link-label {
+  margin-top: auto;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .related-products__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .related-products__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

@@ -1,0 +1,242 @@
+:root {
+  /* Product page palette */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-secondary: #049fd9;
+  --color-secondary-hover: #0284b8;
+
+  /* Text */
+  --text-main: #0f172a;
+  --text-heading: #0d274d;
+  --text-muted: #64748b;
+  --text-soft: #4b5563;
+  --text-dark: #0f172a;
+  --text-black: #000000;
+  --text-inverse: #ffffff;
+
+  /* Surfaces */
+  --bg-page: #f9fafb;
+  --bg-surface: #ffffff;
+  --bg-muted: #f3f4f6;
+  --bg-dark: #000000;
+  --bg-bone: #eeeeee;
+  --color-dark-base: #031813;
+
+  /* Borders */
+  --border-color: #e5e7eb;
+  --border-strong: #cbd5e1;
+
+  /* Layout grid */
+  --grid-margin: 1rem;
+  --grid-gutter: 1rem;
+  --content-max-width: 76rem;
+  --header-max-width: 80rem;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --grid-margin: 1.75rem;
+    --grid-gutter: 1.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --grid-margin: 2.5rem;
+    --grid-gutter: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --grid-margin: 4.5rem;
+    --grid-gutter: 3rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg-page);
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--text-main);
+  background: var(--bg-page);
+  font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-block: 0;
+}
+
+ul,
+ol {
+  margin-block: 0;
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary), white 20%);
+  outline-offset: 3px;
+}
+
+.seoTitle,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.page-shell {
+  width: min(100% - (var(--grid-margin) * 2), var(--content-max-width));
+  margin-inline: auto;
+}
+
+.header-shell {
+  width: min(100% - (var(--grid-margin) * 2), var(--header-max-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.section-title {
+  color: var(--text-black);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.section-description {
+  color: var(--text-soft);
+  font-size: clamp(0.95rem, 1.5vw, 1.0625rem);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-soft {
+  color: var(--text-soft);
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.75rem 1.125rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--text-inverse);
+  background: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  color: var(--text-inverse);
+  background: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn-outline {
+  color: var(--color-primary);
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  background: #eff6ff;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gutter);
+}
+
+@media (min-width: 640px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
