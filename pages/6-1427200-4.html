@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="../components/breadcrumbs/styles.css" />
   <link rel="stylesheet" href="../components/brand-carousel/styles.css" />
   <link rel="stylesheet" href="../components/product-hero/styles.css" />
+  <link rel="stylesheet" href="../components/related-products/styles.css" />
   <link rel="stylesheet" href="../components/footer/styles.css" />
   <link rel="stylesheet" href="../css/style.css" />
   <script src="../components/header/script.js" defer></script>
@@ -259,7 +260,8 @@
                 <div class="product-hero__content">
 
                   <div class="product-hero__gallery">
-                    <div class="product-hero__thumbs">
+                    <div class="product-hero__media-row">
+                      <div class="product-hero__thumbs">
                       <div class="product-hero__thumb is-active">
                         <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front.jpg"
                           alt="Vista 1" onclick="toExchangeImage(this)" />
@@ -274,10 +276,29 @@
                       </div>
                     </div>
 
-                    <div class="product-hero__image">
-                      <img id="img_main"
-                        src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front.jpg"
-                        alt="Switch Catalyst C9200L" onclick="viewImage(this.src)" />
+                      <div class="product-hero__image">
+                        <img id="img_main"
+                          src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front.jpg"
+                          alt="Switch Catalyst C9200L" onclick="viewImage(this.src)" />
+                      </div>
+                    </div>
+
+                    <div class="product-hero__docs product-hero__docs--media">
+                      <h3>Documentación</h3>
+                      <div class="product-hero__docs-list">
+                        <a href="https://www.ds3comunicaciones.com/cisco/files/catalyst_9200.pdf" target="_blank" rel="noopener noreferrer">
+                          <i class="fas fa-file-pdf product-hero__pdf-icon" aria-hidden="true"></i>
+                          <span>Ficha técnica</span>
+                        </a>
+                        <a href="https://web.netperu100.com/cisco/catalyst/files/Catalyst_9200_manual.pdf" target="_blank" rel="noopener noreferrer">
+                          <i class="fas fa-book-open product-hero__book-icon" aria-hidden="true"></i>
+                          <span>Manual</span>
+                        </a>
+                        <a href="https://web.netperu100.com/cisco/catalyst/files/C9200L-24P-4G-E_esp.pdf" target="_blank" rel="noopener noreferrer">
+                          <i class="fas fa-file-alt product-hero__book-icon" aria-hidden="true"></i>
+                          <span>Especificaciones</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
 
@@ -311,10 +332,45 @@
                           <li>PoE+ con presupuesto total de 370W</li>
                           <li>Stacking hasta 8 equipos con 80 Gbps de ancho de banda</li>
                         </ul>
-                        <a href="#technical-details" class="product-hero__details-link">Ver ficha técnica completa</a>
+                      </div>
+
+                      <div class="product-hero__docs product-hero__docs--desktop">
+                        <h3>Documentación</h3>
+                                              <div class="product-hero__docs-list">
+                                                <a href="https://www.ds3comunicaciones.com/cisco/files/catalyst_9200.pdf" target="_blank" rel="noopener noreferrer">
+                                                  <i class="fas fa-file-pdf product-hero__pdf-icon" aria-hidden="true"></i>
+                                                  <span>Ficha técnica</span>
+                                                </a>
+                                                <a href="https://web.netperu100.com/cisco/catalyst/files/Catalyst_9200_manual.pdf" target="_blank" rel="noopener noreferrer">
+                                                  <i class="fas fa-book-open product-hero__book-icon" aria-hidden="true"></i>
+                                                  <span>Manual</span>
+                                                </a>
+                                                <a href="https://web.netperu100.com/cisco/catalyst/files/C9200L-24P-4G-E_esp.pdf" target="_blank" rel="noopener noreferrer">
+                                                  <i class="fas fa-file-alt product-hero__book-icon" aria-hidden="true"></i>
+                                                  <span>Especificaciones</span>
+                                                </a>
+                                              </div>
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <div class="product-hero__docs product-hero__docs--mobile">
+                  <h3>Documentación</h3>
+                                        <div class="product-hero__docs-list">
+                                          <a href="https://www.ds3comunicaciones.com/cisco/files/catalyst_9200.pdf" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-file-pdf product-hero__pdf-icon" aria-hidden="true"></i>
+                                            <span>Ficha técnica</span>
+                                          </a>
+                                          <a href="https://web.netperu100.com/cisco/catalyst/files/Catalyst_9200_manual.pdf" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-book-open product-hero__book-icon" aria-hidden="true"></i>
+                                            <span>Manual</span>
+                                          </a>
+                                          <a href="https://web.netperu100.com/cisco/catalyst/files/C9200L-24P-4G-E_esp.pdf" target="_blank" rel="noopener noreferrer">
+                                            <i class="fas fa-file-alt product-hero__book-icon" aria-hidden="true"></i>
+                                            <span>Especificaciones</span>
+                                          </a>
+                                        </div>
                 </div>
               </div>
             </div>
@@ -557,175 +613,78 @@
       </div>
     </div>
 
-    <!-- PRODUCTOS SIMILARES A ESTE  -->
-    <section class="py-8 bg-gray-50">
-      <div class="container mx-auto px-4 max-w-6xl">
-        <!-- Encabezado -->
-        <div class="text-center mb-8">
-          <h2
-            class="text-2xl md:text-3xl font-bold text-white bg-[#049FD9] py-4 px-6 rounded-lg shadow-md inline-block">
-            También Disponible: Cisco Catalyst 9200 en stock
-          </h2>
-        </div>
-
-        <!-- Grid de productos -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Producto 1 -->
-          <a href="https://web.netperu100.com/cisco/catalyst/C9200L-24T-4G-E.html"
-            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
-                <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24T-4G-E_front.jpg"
-                  alt="Switch Cisco C9200L-24T-4G-E"
-                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    C9200L-24T-4G-E
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
-                  Switch Cisco Catalyst 9200L Essentials C9200L-24T, capa L3 con 24 puertos Gigabit, 04 puertos para
-                  fibra SFP, Stacking hasta 08 equipos, Rackeable, CISCO C9200L-24T-4G-E
-                </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
-                  Ver Producto
-                </div>
-              </div>
+    <section class="related-products" aria-labelledby="related-products-title">
+      <div class="related-products__inner">
+        <header class="related-products__header">
+          <h2 id="related-products-title" class="related-products__title">También Disponible: Cisco Catalyst 9200 en stock</h2>
+        </header>
+    
+        <div class="related-products__grid">
+          <a class="related-products__card" href="https://web.netperu100.com/cisco/catalyst/C9200L-24T-4G-E.html">
+            <div class="related-products__media">
+              <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24T-4G-E_front.jpg" alt="Switch Cisco C9200L-24T-4G-E" />
+            </div>
+            <div class="related-products__body">
+              <h3 class="related-products__name">C9200L-24T-4G-E</h3>
+              <p class="related-products__description">Switch Cisco Catalyst 9200L Essentials C9200L-24T, capa L3 con 24 puertos Gigabit, 04 puertos para fibra SFP, Stacking hasta 08 equipos, Rackeable.</p>
+              <span class="related-products__link-label">Ver Producto</span>
             </div>
           </a>
-
-          <!-- Producto 2 -->
-          <a href="https://web.netperu100.com/cisco/catalyst/C9200L-24P-4G-E.html"
-            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
-                <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front.jpg"
-                  alt="Switch Cisco WS-C9200L-24P-4G-E"
-                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    C9200L-24P-4G-E
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
-                  Switch Cisco Catalyst 9200L Essentials C9200L-24P, capa L3 con 24 puertos PoE+
-                  (370W) Gigabit, 04 puertos para fibra SFP, Stacking hasta 08 equipos, Rackeable, CISCO C9200L-24P-4G-E
-                </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
-                  Ver Producto
-                </div>
-              </div>
+    
+          <a class="related-products__card" href="https://web.netperu100.com/cisco/catalyst/C9200L-24P-4G-E.html">
+            <div class="related-products__media">
+              <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4G-E_front.jpg" alt="Switch Cisco C9200L-24P-4G-E" />
+            </div>
+            <div class="related-products__body">
+              <h3 class="related-products__name">C9200L-24P-4G-E</h3>
+              <p class="related-products__description">Switch Cisco Catalyst 9200L Essentials C9200L-24P, capa L3 con 24 puertos PoE+ (370W) Gigabit, 04 puertos para fibra SFP, Stacking hasta 08 equipos.</p>
+              <span class="related-products__link-label">Ver Producto</span>
             </div>
           </a>
-          <!-- Producto 3 -->
-          <a href="https://web.netperu100.com/cisco/catalyst/C9200L-24T-4X-E.html"
-            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
-                <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24T-4X-E_front.jpg"
-                  alt="Switch Cisco C9200L-24T-4X-E"
-                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    C9200L-24T-4X-E
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
-                  Switch Cisco Catalyst 9200L Essentials C9200L-24T, capa L3 con 24 puertos Gigabit, 04 puertos 10G para
-                  fibra SFP+, Stacking hasta 08 equipos, Rackeable, CISCO C9200L-24T-4X-E
-                </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
-                  Ver Producto
-                </div>
-              </div>
+    
+          <a class="related-products__card" href="https://web.netperu100.com/cisco/catalyst/C9200L-24T-4X-E.html">
+            <div class="related-products__media">
+              <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24T-4X-E_front.jpg" alt="Switch Cisco C9200L-24T-4X-E" />
+            </div>
+            <div class="related-products__body">
+              <h3 class="related-products__name">C9200L-24T-4X-E</h3>
+              <p class="related-products__description">Switch Cisco Catalyst 9200L Essentials C9200L-24T, capa L3 con 24 puertos Gigabit, 04 puertos 10G para fibra SFP+, Stacking hasta 08 equipos.</p>
+              <span class="related-products__link-label">Ver Producto</span>
             </div>
           </a>
-
-          <!-- Producto 4 -->
-          <a href="https://web.netperu100.com/cisco/catalyst/C9200L-24P-4X-E.html"
-            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
-                <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4X-E_front.jpg"
-                  alt="Switch Cisco WS-C9200L-24P-4X-E"
-                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    C9200L-24P-4X-E
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
-                  Switch Cisco Catalyst 9200L Essentials C9200L-24P, capa L3 con 24 puertos PoE+
-                  (370W) Gigabit, 04 puertos 10G para fibra SFP+, Stacking hasta 08 equipos, Rackeable, CISCO
-                  C9200L-24P-4X-E
-                </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
-                  Ver Producto
-                </div>
-              </div>
+    
+          <a class="related-products__card" href="https://web.netperu100.com/cisco/catalyst/C9200L-24P-4X-E.html">
+            <div class="related-products__media">
+              <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-24P-4X-E_front_large.jpg" alt="Switch Cisco C9200L-24P-4X-E" />
+            </div>
+            <div class="related-products__body">
+              <h3 class="related-products__name">C9200L-24P-4X-E</h3>
+              <p class="related-products__description">Switch Cisco Catalyst 9200L Essentials C9200L-24P, capa L3 con 24 puertos PoE+ (370W) Gigabit, 04 puertos 10G para fibra SFP+.</p>
+              <span class="related-products__link-label">Ver Producto</span>
             </div>
           </a>
-
-          <!-- Producto 5 -->
-          <a href="https://web.netperu100.com/cisco/catalyst/C9200L-48T-4G-E.html"
-            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
-                <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-48T-4G-E_front.jpg"
-                  alt="Switch Cisco C9200L-48T-4G-E"
-                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    C9200L-48T-4G-E
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
-                  Switch Cisco Catalyst 9200L Essentials C9200L-48T, capa L3 con 48 puertos Gigabit, 04 puertos para
-                  fibra SFP, Stacking hasta 08 equipos, Rackeable, CISCO C9200L-48T-4G-E
-                </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
-                  Ver Producto
-                </div>
-              </div>
+    
+          <a class="related-products__card" href="https://web.netperu100.com/cisco/catalyst/C9200L-48T-4G-E.html">
+            <div class="related-products__media">
+              <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-48T-4G-E_front.jpg" alt="Switch Cisco C9200L-48T-4G-E" />
+            </div>
+            <div class="related-products__body">
+              <h3 class="related-products__name">C9200L-48T-4G-E</h3>
+              <p class="related-products__description">Switch Cisco Catalyst 9200L Essentials C9200L-48T, capa L3 con 48 puertos Gigabit, 04 puertos para fibra SFP, Stacking hasta 08 equipos.</p>
+              <span class="related-products__link-label">Ver Producto</span>
             </div>
           </a>
-
-          <!-- Producto 6 -->
-          <a href="https://web.netperu100.com/cisco/catalyst/C9200L-48P-4G-E.html"
-            class="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-200 hover:border-blue-500">
-            <div class="p-5 flex flex-col h-full">
-              <div class="flex-grow flex items-center justify-center mb-4 h-40">
-                <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-48P-4G-E_front.jpg"
-                  alt="Switch Cisco WS-C9200L-48P-4G-E"
-                  class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105" />
-              </div>
-              <div class="border-t pt-4">
-                <div class="flex justify-between flex-col items-center mb-2">
-                  <h3 class="text-lg font-bold text-gray-800">
-                    C9200L-48P-4G-E
-                  </h3>
-                </div>
-                <p class="text-sm text-gray-600 mt-2 group-hover:text-gray-800 transition-colors line-clamp-2">
-                  Switch Cisco Catalyst 9200L Essentials C9200L-48P, capa L3 con 48 puertos PoE+
-                  (740W) Gigabit, 04 puertos para fibra SFP, Stacking hasta 08 equipos, Rackeable, CISCO C9200L-48P-4G-E
-                </p>
-                <div class="text-center mt-6 text-blue-600 font-semibold">
-                  Ver Producto
-                </div>
-              </div>
+    
+          <a class="related-products__card" href="https://web.netperu100.com/cisco/catalyst/C9200L-48P-4G-E.html">
+            <div class="related-products__media">
+              <img src="https://web.netperu100.com/cisco/catalyst/images/C9200L-48P-4G-E_front.jpg" alt="Switch Cisco C9200L-48P-4G-E" />
+            </div>
+            <div class="related-products__body">
+              <h3 class="related-products__name">C9200L-48P-4G-E</h3>
+              <p class="related-products__description">Switch Cisco Catalyst 9200L Essentials C9200L-48P, capa L3 con 48 puertos PoE+ (740W) Gigabit, 04 puertos para fibra SFP.</p>
+              <span class="related-products__link-label">Ver Producto</span>
             </div>
           </a>
-
         </div>
       </div>
     </section>
