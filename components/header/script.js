@@ -5,11 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.querySelector('[data-menu-overlay]');
   const menu = document.getElementById('mobile-product-menu');
 
+  let lastScrollY = window.scrollY;
+
   const updateStickyHeader = () => {
     if (!header) return;
 
+    const currentScrollY = window.scrollY;
+    const isScrollingDown = currentScrollY > lastScrollY && currentScrollY > header.offsetHeight;
+
     document.documentElement.style.setProperty('--site-header-height', `${header.offsetHeight}px`);
-    document.body.classList.toggle('is-scrolled', window.scrollY > 0);
+    document.body.classList.toggle('is-scrolled', currentScrollY > 0);
+    document.body.classList.toggle('is-scrolling-down', isScrollingDown);
+
+    lastScrollY = currentScrollY;
   };
 
   updateStickyHeader();
